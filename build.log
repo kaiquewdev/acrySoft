@@ -1,0 +1,7 @@
+Logfile initialized
+[INFO] logfile = /home/kaique/Documentos/Development/projects/acrySoft/build.log
+[DEBUG] /home/kaique/.titanium/mobilesdk/linux/1.7.3/android/builder.py run /home/kaique/Documentos/Development/projects/acrySoft /home/kaique/android-sdk
+[INFO] Titanium SDK version: 1.7.3 (10/17/11 13:44 dcf4257)
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
