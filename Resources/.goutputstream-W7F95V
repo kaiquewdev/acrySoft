@@ -6,13 +6,13 @@ var tabGroup = Ti.UI.createTabGroup();
 //Main Window
 var main = Ti.UI.createWindow({
     title:  'AcrySof',
-    font:	{fontSize: 20},
     url:    'main.js'
 });
 
 //Tab for app
 var mainTab = Ti.UI.createTab({
     title:  'AcrySof',
+    font-size: '16',
     window: main
 });
 
