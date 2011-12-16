@@ -7,7 +7,8 @@ var tabGroup = Ti.UI.createTabGroup();
 var main = Ti.UI.createWindow({
     title:  'AcrySof',
     font:	{fontSize: 20},
-    url:    'main.js'
+    url:    'main.js',
+    translucent: false
 });
 
 //Tab for app

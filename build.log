@@ -5,11 +5,12 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.005855 seconds on emulator to get ready
+[DEBUG] waited 0.006173 seconds on emulator to get ready
 [DEBUG] br.com.test installed? True
 [WARN] Fastdev enabled, but server isn't running, deploying normally
 [INFO] Copying project resources..
 [TRACE] COPYING MODIFIED FILE: /home/kaique/Documentos/Development/projects/acrySoft/Resources/main.js => /home/kaique/Documentos/Development/projects/acrySoft/build/android/bin/assets/Resources/main.js
+[TRACE] COPYING MODIFIED FILE: /home/kaique/Documentos/Development/projects/acrySoft/Resources/action.js => /home/kaique/Documentos/Development/projects/acrySoft/build/android/bin/assets/Resources/action.js
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
 [DEBUG] copying app icon: /home/kaique/Documentos/Development/projects/acrySoft/build/android/bin/assets/Resources/appicon.png
@@ -34,7 +35,7 @@ Logfile initialized
 [DEBUG] copying /home/kaique/Documentos/Development/projects/acrySoft/Resources/android/images/res-long-port-hdpi/default.png splash screen to /home/kaique/Documentos/Development/projects/acrySoft/build/android/res/drawable-long-port-hdpi/background.png
 [DEBUG] found drawable-notlong-land-ldpi splash screen at /home/kaique/Documentos/Development/projects/acrySoft/Resources/android/images/res-notlong-land-ldpi/default.png
 [DEBUG] copying /home/kaique/Documentos/Development/projects/acrySoft/Resources/android/images/res-notlong-land-ldpi/default.png splash screen to /home/kaique/Documentos/Development/projects/acrySoft/build/android/res/drawable-notlong-land-ldpi/background.png
-[DEBUG] found splash screen at /home/kaique/Documentos/Development/projects/acrySoft/build/android/bin/assets/Resources/default.png
+[DEBUG] copying default splash screen
 [TRACE] Writing out AndroidManifest.xml
 [DEBUG] adding /home/kaique/Documentos/Development/projects/acrySoft/build/android/gen/br/com/test/AcrysoftAppInfo.java to javac build list
 [DEBUG] adding /home/kaique/Documentos/Development/projects/acrySoft/build/android/gen/br/com/test/AcrysoftActivity.java to javac build list
@@ -48,9 +49,9 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/img/nemo.jpg
 [DEBUG] from resource zip => assets/Resources/KS_nav_ui.png
 [DEBUG] from resource zip => assets/Resources/KS_nav_views.png
+[DEBUG] from resource zip => assets/Resources/action.js
 [DEBUG] from resource zip => assets/Resources/app.js
 [DEBUG] from resource zip => assets/Resources/appicon.png
-[DEBUG] from resource zip => assets/Resources/default.png
 [DEBUG] from resource zip => assets/Resources/main.js
 [DEBUG] from resource zip => assets/tiapp.xml
 [DEBUG] from resource zip => res/drawable/appicon.png
@@ -92,7 +93,7 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.005017 seconds on emulator to get ready
+[DEBUG] waited 0.005145 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Launching application ... acrySoft
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=br.com.test/.AcrysoftActivity }
