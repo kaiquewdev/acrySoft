@@ -1,29 +1,24 @@
 //Action
-var win = Ti.UI.currentWindow;
-
-function showContent(cText) {
-	var row = Ti.UI.createTableViewRow(),
-		view = Ti.UI.createView({width: 'auto', height: 'auto'}),
-		label = Ti.UI.createLabel({
-			text: cText,
-			width: 'auto',
-			height: 'auto',
-			textAlign: 'left',
-			font: {fontSize:16}
-		});
-		
-		view.add(label);
-		row.add(view);
-		
-		if(typeof cText !== 'undefined') {
-			return row;
-		}
-};
-
-var table = Ti.UI.createTableView(),
-	cT = new showContent('Title: ' + win.imgSet.title),
-	cU = new showContent('URL: ' + win.imgSet.url);
+function makeItem(vURL) {
+	var view, imgv;
 	
-table.setData([cT, cU]);
-win.add(table);
+	view = Ti.UI.createView({
+		borderRadius: 0,
+		width: 'auto',
+		height: 'auto'
+	});
+	
+	imgv = Ti.UI.createImageView({url: vURL});
+	
+	view.add(imgv);
+	
+	if(typeof vURL !== 'undefined') {
+		return view;	
+	}
+}; 
+
+var win = Ti.UI.currentWindow,
+	visualization = new makeItem(win.imgSet.url);
+
+win.add(visualization);
 win.open();

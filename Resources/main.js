@@ -1,44 +1,57 @@
-function catalogItem(cTitle, cImgURL, cPath) {
-		cPath = cPath || 'action.js';
-		
-	var itemViewSet	= {borderRadius: 10, backgroundColor: 'white', width: 'auto', height: 80},
-		itemView	= Ti.UI.createView(itemViewSet),
-		itemTitle	= Ti.UI.createTableViewSection({headerTitle: cTitle}),
-		itemRow		= Ti.UI.createTableViewRow({path: cPath}),
-		itemImg		= Ti.UI.createImageView({url: cImgURL});
-		
-		itemRow.add(itemView);
-		itemTitle.add(itemRow);
-		itemView.add(itemImg);
-		
-		itemRow.addEventListener('click', function(e) {
-			var win = Ti.UI.createWindow({
-				url: e.rowData.path,
-				title: cTitle
-			});
-			
-			var imgSet = {
-				title: cTitle,
-				url: cImgURL
-			};
-			
-			win.imgSet = imgSet;
-			Ti.UI.currentTab.open(win);
-		});
-		
-		if(typeof cTitle !== 'undefined' && typeof cImgURL !== 'undefined') {
-			return itemTitle;	
-		}
+//main.js
+function makeThumb(top, left, bottom, right, imgUrl) {
+	var thumbFrame = Ti.UI.createView({
+		borderRadius: 2,
+		width: 128,
+		height: 128,
+		backgroundColor: '#262426',
+		borderWidth: 1,
+		borderColor: '#96720C'		
+	});
+	
+	if (typeof top !== 'undefined') {
+		thumbFrame.top = top;
+	} if (typeof left !== 'undefined') {
+		thumbFrame.left = left;
+	} if (typeof right !== 'undefined') {
+		thumbFrame.right = right;
+	} if (typeof bottom !== 'undefined') {
+		thumbFrame.bottom = bottom;
+	}
+	
+	return thumbFrame;
 };
 
-//Main window
-var win = Ti.UI.createWindow(),
-	table = Ti.UI.createTableView(),
-	nemo = new catalogItem('Nemo', 'img/nemo.jpg', 'action.js'),
-	dori = new catalogItem('Dori', 'img/nemo.jpg');
+function makeLineThumb() {
+	var	args = arguments, 
+		lineThumbs = Ti.UI.createView({
+			top: 0,
+			left: 0,
+			height: 138,
+			width:'auto',
+			background: '#000'
+	});
+	
+	if(args.length > 0) {
+		for(var i=0; i < args.length; i++) {
+			lineThumbs.add(args[i]);
+		}
+	}
+	
+	return lineThumbs;
+};
 
-//Set table
-table.setData([nemo, dori]);
+var win = Ti.UI.currentWindow;
 
-win.add(table);
-win.open();
+var mainFrame = Ti.UI.createView({
+	top:65,
+	left: 0,
+	width: 'auto',
+	height: 'auto'
+});
+win.add(mainFrame);
+
+var	thumb1 = makeThumb(top=5, left=20),
+	line1 = makeLineThumb(thumb1);
+
+mainFrame.add(line1);
