@@ -13,17 +13,18 @@ win.add(mainFrame);
 
 //Make a firts thumb
 var	thumbTitle1 = new makeTitleThumb('Catarata'),	
-	thumbImg1 = new makeImgThumb('img/model-before-1.jpg'),
+	thumbImg1 = new makeImgThumb('img/model-1.jpg', -100),
 	line1 = new makeLineThumb();
 	
 line1.addEventListener('click', function() {
+	win.close();
+	
 	var catarata = Ti.UI.createWindow({
 		url: 'simulations/catarata.js',
 		title: 'Catarata'
 	});
 	
-	win.add(catarata);
-	catarata.open()
+	catarata.open();
 });
 
 
